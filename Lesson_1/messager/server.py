@@ -1,5 +1,6 @@
 # server
 
+
 from data.utils import get_message, send_message
 from decors import Log
 import errors_user as errors_user
@@ -11,8 +12,11 @@ import logging
 import select
 from collections import deque
 from socket import socket, AF_INET, SOCK_STREAM
+import os
 
-with open('config.yaml', encoding='utf-8') as conf_file:
+def_path = os.getcwd()
+
+with open(def_path + '\messager\config.yaml', encoding='utf-8') as conf_file:
     data = yaml.load(conf_file, Loader=yaml.FullLoader)
 
 LOG = logging.getLogger('server')

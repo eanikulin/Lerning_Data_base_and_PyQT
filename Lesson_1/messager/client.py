@@ -13,8 +13,11 @@ import argparse
 import logging
 from decors import Log
 import threading
+import os
 
-with open('config.yaml', encoding='utf-8') as conf_file:
+def_path = os.getcwd()
+
+with open(def_path + '\messager\config.yaml', encoding='utf-8') as conf_file:
     data = yaml.load(conf_file, Loader=yaml.FullLoader)
 
 LOG = logging.getLogger('client')
