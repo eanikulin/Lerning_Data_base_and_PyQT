@@ -1,11 +1,10 @@
 # Логгерский конфиг для сервера
 
 import sys
+
 sys.path.append('../')
-import logging
 import logging.handlers
 import os
-from lesson_2.message_proj.common.variables import LOGGING_LEVEL
 
 # создаём формировщик логов (formatter):
 server_formatter = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message)s')
@@ -25,7 +24,7 @@ log_file.setFormatter(server_formatter)
 logger = logging.getLogger('server')
 logger.addHandler(steam)
 logger.addHandler(log_file)
-logger.setLevel(LOGGING_LEVEL)
+logger.setLevel(data["LOGGING_LEVEL"])
 
 # отладка
 if __name__ == '__main__':

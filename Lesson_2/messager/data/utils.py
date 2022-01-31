@@ -14,13 +14,7 @@ def_path = os.getcwd()
 with open(def_path + '\config.yaml', encoding='utf-8') as conf_file:
     data = yaml.load(conf_file, Loader=yaml.FullLoader)
 
-# Словари - ответы:
-# 200
-RESPONSE_200 = {data["RESPONSE"]: 200}
-# 400
-RESPONSE_400 = {data["RESPONSE"]: 400, data["ERROR"]: None}
-
-LOGGING_LEVEL = logging.DEBUG
+# LOGGING_LEVEL = logging.DEBUG
 
 
 # Утилита приёма и декодирования сообщения

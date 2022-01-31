@@ -2,10 +2,9 @@
 
 import sys
 import os
+
 sys.path.append('../')
 from data.utils import *
-# import logging
-# from data.variables import LOGGING_LEVEL
 
 # создаём формировщик логов (formatter):
 client_formatter = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message)s')
@@ -25,7 +24,7 @@ log_file.setFormatter(client_formatter)
 logger = logging.getLogger('client')
 logger.addHandler(steam)
 logger.addHandler(log_file)
-logger.setLevel(LOGGING_LEVEL)
+logger.setLevel(data["LOGGING_LEVEL"])
 
 # отладка
 if __name__ == '__main__':

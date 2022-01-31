@@ -34,7 +34,7 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
 
     # Функция запрашивает кому отправить сообщение и само сообщение, и отправляет полученные данные на сервер.
     def create_message(self):
-        to = input('Введите получателя сообщения: ')
+        to = input('Введите получателя сообщения или "all" для всех: ')
         message = input('Введите сообщение для отправки: ')
         message_dict = {
             data['ACTION']: data['MESSAGE'],

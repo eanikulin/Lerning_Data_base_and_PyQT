@@ -106,8 +106,7 @@ class Server(metaclass=ServerVerifier):
             send_message(self.names[message[data["DESTINATION"]]], message)
             logger.info(
                 f'Отправлено сообщение пользователю {message[data["DESTINATION"]]} от пользователя {message[data["SENDER"]]}.')
-        elif message[data["DESTINATION"]] not in self.names or self.names[
-            message[data["DESTINATION"]]] not in listen_socks:
+        elif message[data["DESTINATION"]] not in self.names and message[data["DESTINATION"]].lower() == 'all':
             for client in listen_socks:
                 send_message(client, message)
 
@@ -129,7 +128,7 @@ class Server(metaclass=ServerVerifier):
             # иначе отправляем ответ и завершаем соединение.
             if message[data["USER"]][data["ACCOUNT_NAME"]] not in self.names.keys():
                 self.names[message[data["USER"]][data["ACCOUNT_NAME"]]] = client
-                send_message(client, RESPONSE_200)
+                send_message(client, data["RESPONSE_200"])
             else:
                 response = RESPONSE_400
                 response[data["ERROR"]] = 'Имя пользователя уже занято.'
