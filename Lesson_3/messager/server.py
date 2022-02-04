@@ -63,7 +63,7 @@ class Server(threading.Thread, metaclass=ServerVerifier):
         self.sock = transport
         self.sock.listen()
 
-    def main_loop(self):
+    def run(self):
         # Инициализация Сокета
         self.init_socket()
 
