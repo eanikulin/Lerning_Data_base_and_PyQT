@@ -1,0 +1,10 @@
+2021-12-09 00:32:07,381 CRITICAL   server_logs_config.py Критическая ошибка
+2021-12-09 00:32:07,381 ERROR      server_logs_config.py Ошибка
+2021-12-09 00:32:07,381 DEBUG      server_logs_config.py Отладочная информация
+2021-12-09 00:32:07,382 INFO       server_logs_config.py Информационное сообщение
+2021-12-09 00:32:07,382 WARNING    server_logs_config.py Внимание
+2021-12-09 00:32:46,119 CRITICAL   server_logs_config.py Критическая ошибка
+2021-12-09 00:32:46,119 ERROR      server_logs_config.py Ошибка
+2021-12-09 00:32:46,120 DEBUG      server_logs_config.py Отладочная информация
+2021-12-09 00:32:46,120 INFO       server_logs_config.py Информационное сообщение
+2021-12-09 00:32:46,122 WARNING    server_logs_config.py Внимание
