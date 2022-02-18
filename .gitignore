@@ -51,3 +51,15 @@ Lesson_7/messager/server/__pycache__/
 Lesson_7/messager/logs/__pycache__/
 
 Lesson_7/messager/client/__pycache__/
+
+Lesson_8/messager/client_dist/.pypirc
+
+Lesson_8/messager/server_dist/.pypirc
+
+Lesson_8/messager/server_dist/server/common/__pycache__/
+
+Lesson_8/messager/server_dist/server/logs/__pycache__/
+
+Lesson_8/messager/client_dist/client/common/__pycache__/
+
+Lesson_8/messager/client_dist/client/logs/__pycache__/
